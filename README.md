@@ -4,10 +4,15 @@ This container aims to simplify the development of EPOS applications by providin
 
 ## How to use
 
-Given the EPOS code is in the current directory, you can compile and run that EPOS application in **any** Linux computer by using just three commands:
+Well..to execute a docker container you first need that Docker was installed and running in your computer. In a Linux computer, you can install it just by running:
 
 ```
-# wget -qO- https://get.docker.com/ | sh # If you don't have Docker installed yet
+wget -qO- https://get.docker.com/ | sh
+```
+
+Given the EPOS code is in the current directory, you can compile and run that EPOS application by using just two commands:
+
+```
 docker run --rm -v `pwd`:/code fjorgemota/epos make all
 docker run --rm -v `pwd`:/code fjorgemota/epos make APPLICATION=philosophers_dinner run
 ```
